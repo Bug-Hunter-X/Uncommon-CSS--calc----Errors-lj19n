@@ -1,0 +1,25 @@
+/* bugSolution.css */
+
+/* Correctly subtracting pixels from a percentage */
+.container {
+  width: calc(100% - 10px);
+}
+
+/* Handling units carefully */
+.element {
+  width: calc(50% - 2em);
+  /* this may work depending on the context, but better to be consistent */ 
+  /* If a consistent pixel width is desired use: */
+  /*width: calc(50% - 20px);*/
+}
+
+/* Combining calc with other properties  */
+.another-element {
+  width: calc(50vw - 10px);
+  /*Using vw is often preferred for responsive design*/
+}
+
+/* Correct use of nested calc() */
+.nested-element{
+  width:calc(50% - calc(10px + 5%));
+} 
